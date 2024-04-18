@@ -1,6 +1,6 @@
 FROM oven/bun:latest
 
-RUN apt update && \
-    apt upgrade -y && \
-    apt cleanbash
-
+# Update and clean up APK
+RUN apk update && \
+    apk upgrade && \
+    rm -rf /var/cache/apk/*
