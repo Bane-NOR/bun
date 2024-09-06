@@ -1,7 +1,5 @@
-FROM oven/bun:latest
+FROM oven/bun:alpine
 
 # Update and clean up APT
-RUN apt update && \
-    apt upgrade -y && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk update  && \
+    apk upgrade \
